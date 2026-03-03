@@ -212,6 +212,50 @@ section {
     margin-bottom: 32px;
 }
 
+.install-methods {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.install-method {
+    text-align: center;
+}
+
+.install-method h3 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.install-divider {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.code-block {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    text-align: left;
+}
+
+.code-block code {
+    display: block;
+    font-family: "SF Mono", "Menlo", monospace;
+    font-size: 0.8rem;
+    color: var(--text);
+    line-height: 1.8;
+    user-select: all;
+}
+
 .download-note {
     color: var(--text-secondary);
     font-size: 0.8rem;

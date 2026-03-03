@@ -70,9 +70,9 @@
             </div>
 
             <div class="feature-card">
-                <span class="icon" aria-hidden="true">📍</span>
-                <h3>Menu Bar App</h3>
-                <p>Lives in your menu bar. Left-click for quick controls, right-click for preferences and options.</p>
+                <span class="icon" aria-hidden="true">🎧</span>
+                <h3>Auto-Detect</h3>
+                <p>Activates only when a Focusrite Scarlett is the default output device. Media keys pass through to macOS otherwise.</p>
             </div>
         </div>
     </div>
@@ -82,14 +82,28 @@
 <section class="download" id="download">
     <div class="container">
         <h2>Download</h2>
-        <p class="subtitle">Free and open source. Requires macOS and Focusrite Control 2.</p>
+        <p class="subtitle">Free and open source. Requires macOS 15+ and Focusrite Control 2.</p>
 
-        <a href="https://github.com/nickmorozov/FocusriteVolumeControl/releases/latest" class="btn btn-primary">
-            ⬇ Download Latest Release
-        </a>
+        <div class="install-methods">
+            <div class="install-method">
+                <h3>Homebrew</h3>
+                <div class="code-block">
+                    <code>brew tap nickmorozov/focusrite-volume-control</code>
+                    <code>brew install --cask focusrite-control-2-volume</code>
+                </div>
+            </div>
+
+            <div class="install-divider">or</div>
+
+            <div class="install-method">
+                <h3>Direct Download</h3>
+                <a href="https://github.com/nickmorozov/FocusriteVolumeControl/releases/latest" class="btn btn-primary">
+                    ⬇ Download DMG
+                </a>
+            </div>
+        </div>
 
         <p class="download-note">
-            Distributed as a DMG outside the App Store.<br>
             The app requires Accessibility and Automation permissions — a setup wizard will guide you on first launch.
         </p>
     </div>
@@ -112,8 +126,9 @@
             <div class="setup-step">
                 <div class="step-number">2</div>
                 <div class="step-content">
-                    <h3>Download &amp; open the DMG</h3>
-                    <p>Drag <code>FocusriteVolumeControl.app</code> to your Applications folder.</p>
+                    <h3>Install the app</h3>
+                    <p>Via Homebrew: <code>brew tap nickmorozov/focusrite-volume-control &amp;&amp; brew install --cask focusrite-control-2-volume</code><br>
+                    Or download the <a href="https://github.com/nickmorozov/FocusriteVolumeControl/releases/latest">DMG</a> and drag to Applications.</p>
                 </div>
             </div>
 

@@ -321,7 +321,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     @objc private func openIssues() {
-        if let url = URL(string: "https://github.com/nickmorozov/FocusriteVolumeControl/issues") {
+        if let url = URL(string: "https://github.com/enum-solutions-inc/FocusriteVolumeControl/issues") {
             NSWorkspace.shared.open(url)
         }
     }

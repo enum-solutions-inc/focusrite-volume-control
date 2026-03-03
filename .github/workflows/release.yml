@@ -45,8 +45,8 @@ jobs:
           body: |
             **Homebrew:**
             ```
-            brew tap nickmorozov/focusrite-volume-control
-            brew install --cask focusrite-control-2-volume
+            brew tap enum-solutions-inc/focusrite-volume-control
+            brew install --cask focusrite-volume-control
             ```
 
             **DMG SHA256:** `${{ steps.sha.outputs.sha256 }}`

@@ -68,5 +68,5 @@ fastlane/test_output
 build/
 *.profraw
 
-# Claude Code local settings
-.claude/settings.local.json
+# IDE
+.idea/

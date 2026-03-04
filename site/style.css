@@ -358,6 +358,10 @@ section {
     margin-bottom: 12px;
 }
 
+.bmc-link {
+    color: var(--orange);
+}
+
 /* Responsive */
 
 @media (max-width: 600px) {

@@ -66,6 +66,20 @@ struct PreferencesView: View {
 
             // Keyboard Shortcuts Section
             ShortcutsSectionView(shortcutManager: shortcutManager)
+
+            Divider()
+
+            // Support
+            HStack(spacing: 6) {
+                Image(systemName: "cup.and.saucer.fill")
+                    .foregroundStyle(.orange)
+                    .font(.caption)
+                Link("If this app saved you time, buy me a coffee",
+                     destination: URL(string: "https://buymeacoffee.com/enum")!)
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+            .frame(maxWidth: .infinity, alignment: .center)
         }
         .padding()
         .frame(width: 380)

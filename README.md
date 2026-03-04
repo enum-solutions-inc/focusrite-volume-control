@@ -50,7 +50,3 @@ The app drives Focusrite Control 2 via UI automation (AppleScript + Accessibilit
 xcodebuild -scheme "Focusrite Volume Control" -configuration Release \
   CODE_SIGN_IDENTITY=- CODE_SIGNING_REQUIRED=NO build
 ```
-
-## License
-
-MIT

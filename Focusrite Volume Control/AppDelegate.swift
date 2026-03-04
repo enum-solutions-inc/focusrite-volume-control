@@ -268,7 +268,25 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         alert.informativeText = "Control your Focusrite Scarlett Solo volume with system media keys.\n\nVersion \(version) (\(build))\n\n\u{00A9} 2026"
         alert.alertStyle = .informational
         alert.addButton(withTitle: "OK")
+
+        let coffeeButton = NSButton(frame: .zero)
+        coffeeButton.title = "If this app saved you time, buy me a coffee"
+        coffeeButton.bezelStyle = .inline
+        coffeeButton.isBordered = false
+        coffeeButton.font = NSFont.systemFont(ofSize: NSFont.smallSystemFontSize)
+        coffeeButton.contentTintColor = .linkColor
+        coffeeButton.target = self
+        coffeeButton.action = #selector(openCoffeeLink)
+        coffeeButton.sizeToFit()
+        alert.accessoryView = coffeeButton
+
         alert.runModal()
+    }
+
+    @objc private func openCoffeeLink() {
+        if let url = URL(string: "https://buymeacoffee.com/enum") {
+            NSWorkspace.shared.open(url)
+        }
     }
 
     @objc private func showPreferencesMenuItem() {

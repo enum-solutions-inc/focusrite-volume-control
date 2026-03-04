@@ -2,6 +2,16 @@
 
 A macOS menu bar app that lets you control your Focusrite Scarlett Solo volume with your keyboard's media keys and custom shortcuts.
 
+<p align="center">
+  <img src="site/images/hud.png" alt="Volume HUD" height="60">
+</p>
+
+<p align="center">
+  <img src="site/images/popover.png" alt="Menu bar popover" width="340">
+  &nbsp;&nbsp;
+  <img src="site/images/preferences.png" alt="Preferences window" width="340">
+</p>
+
 ## Install
 
 ### Homebrew

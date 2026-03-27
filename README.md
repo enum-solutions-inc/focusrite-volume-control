@@ -44,6 +44,14 @@ Download the latest DMG from [Releases](https://github.com/enum-solutions-inc/fo
 
 The app drives Focusrite Control 2 via UI automation (AppleScript + Accessibility API). It intercepts system media keys through a `CGEventTap` and routes them to FC2's sliders instead of macOS's built-in volume control.
 
+## Known issues
+
+- **Accessibility permission stuck:** If the app stops responding to media keys after an update or reinstall, macOS may have cached a stale accessibility grant. Reset it with:
+  ```bash
+  tccutil reset Accessibility solutions.enum.FocusriteVolumeControl
+  ```
+  Then relaunch the app and re-grant the permission when prompted.
+
 ## Build from source
 
 ```bash

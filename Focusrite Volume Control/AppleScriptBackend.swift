@@ -16,7 +16,7 @@ class AppleScriptBackend: VolumeBackend {
     // MARK: - Constants
 
     private let fc2Process = "Focusrite Control 2"
-    private let logger = Logger(subsystem: "net.nickmorozov.FocusriteVolumeControl", category: "AppleScriptBackend")
+    private let logger = Logger(subsystem: "solutions.enum.FocusriteVolumeControl", category: "AppleScriptBackend")
 
     // MARK: - State
 

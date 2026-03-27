@@ -11,7 +11,13 @@ cask "focusrite-volume-control" do
 
   app "Focusrite Volume Control.app"
 
+  caveats <<~EOS
+    If media keys stop working after an update, reset the accessibility permission:
+      tccutil reset Accessibility solutions.enum.FocusriteVolumeControl
+    Then relaunch the app and re-grant the permission when prompted.
+  EOS
+
   zap trash: [
-    "~/Library/Preferences/net.nickmorozov.FocusriteVolumeControl.plist",
+    "~/Library/Preferences/solutions.enum.FocusriteVolumeControl.plist",
   ]
 end

@@ -436,8 +436,19 @@ final class VolumeControllerTests: XCTestCase {
     // MARK: - Step Size Tests
 
     func testStepSize_MatchesSystemIncrement() {
-        // macOS system volume uses 16 steps: 100/16 = 6.25
+        // Default is system: macOS system volume uses 16 steps: 100/16 = 6.25
         XCTAssertEqual(controller.stepSize, 6.25)
+        XCTAssertEqual(controller.volumeStepSetting, .system)
+    }
+
+    func testStepSize_Fine() {
+        controller.volumeStepSetting = .fine
+        XCTAssertEqual(controller.stepSize, 3.125)  // 100/32
+    }
+
+    func testStepSize_Finest() {
+        controller.volumeStepSetting = .finest
+        XCTAssertEqual(controller.stepSize, 1.5625)  // 100/64
     }
 
     // MARK: - Input Channel Tests

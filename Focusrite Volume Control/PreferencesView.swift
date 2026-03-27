@@ -50,6 +50,21 @@ struct PreferencesView: View {
                                 .padding(.leading, 20)
                         }
 
+                        // Volume Step Size picker
+                        VStack(alignment: .leading, spacing: 2) {
+                            Picker("Volume Step Size", selection: $volumeController.volumeStepSetting) {
+                                ForEach(VolumeStepSize.allCases) { size in
+                                    Text(size.rawValue).tag(size)
+                                }
+                            }
+                            .pickerStyle(.menu)
+
+                            Text(volumeController.volumeStepSetting.description)
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                                .padding(.leading, 20)
+                        }
+
                         // Allow Gain toggle with subtitle
                         VStack(alignment: .leading, spacing: 2) {
                             Toggle("Allow Gain (0 to +6 dB)", isOn: $volumeController.allowGain)

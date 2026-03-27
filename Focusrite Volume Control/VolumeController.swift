@@ -10,6 +10,31 @@ import Foundation
 import Combine
 import AppKit  // For NSSound
 
+/// Volume step granularity: how many key presses to traverse the full range
+enum VolumeStepSize: String, CaseIterable, Identifiable {
+    case system = "System"    // 16 steps (6.25%)
+    case fine = "Fine"        // 32 steps (3.125%)
+    case finest = "Finest"    // 64 steps (1.5625%)
+
+    var id: String { rawValue }
+
+    var percentage: Double {
+        switch self {
+        case .system: return 6.25      // 100/16
+        case .fine:   return 3.125     // 100/32
+        case .finest: return 1.5625    // 100/64
+        }
+    }
+
+    var description: String {
+        switch self {
+        case .system: return "16 steps (matches macOS)"
+        case .fine:   return "32 steps"
+        case .finest: return "64 steps"
+        }
+    }
+}
+
 /// Available backend types for volume control
 enum BackendType: String, CaseIterable, Identifiable {
     case appleScript = "AppleScript"
@@ -49,7 +74,8 @@ class VolumeController: ObservableObject {
 
     // MARK: - Configuration
 
-    let stepSize: Double = 6.25  // Matches macOS system: 16 steps across full range (100/16)
+    @Published var volumeStepSetting: VolumeStepSize = .system
+    var stepSize: Double { volumeStepSetting.percentage }
     @Published var keepFC2Minimized: Bool = true  // Minimize FC2 on connect (user can unminimize manually)
     /// Reads macOS "Play feedback when volume is changed" from System Settings → Sound
     var playVolumeSound: Bool {

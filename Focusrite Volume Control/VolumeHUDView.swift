@@ -19,7 +19,7 @@ class VolumeHUDViewModel: ObservableObject {
     // Same perceptual curve as VolumeController: 50% slider = -16 dB
     private let curveExponent: Double = 0.197
 
-    /// Convert dB to perceptual percent (0–100, or above 100 for overgain)
+    /// Convert dB to perceptual percent (0-100, or above 100 for overgain)
     private func dbToPercent(_ db: Double) -> Double {
         guard db > -127 else { return 0 }
         let normalized = (db + 127.0) / 127.0
